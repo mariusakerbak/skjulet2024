@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: #fff;
+}
+
+nav svg {
+  font-size: 40px;
+  color: #ffffff;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.youtube-video {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+
+/* TEXT */
+p, blockquote { margin-bottom: 1rem; }
+
+/* HERO */
+#hero {
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  background-image: url("/images/FINAL_HERO.webp");
+  background-position: bottom center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 992px) {
+  #hero {
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    background-image: url("/images/FINAL_HERO.webp");
+    background-position: bottom center;
+    background-size: 100% auto;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+}
