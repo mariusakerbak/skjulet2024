@@ -1,11 +1,11 @@
 "use client"
 import dynamic from 'next/dynamic';
 
-const Map = dynamic(() => import('@/components/Map'),
+const MapController = dynamic(() => import('@/components/MapController'),
       {
         loading: () => <p>Kartet laster...</p>,
         ssr: false
       }
   )
 
-  export {Map}
+  export {MapController}
