@@ -14,6 +14,8 @@ export default function Home() {
             <article className="flex flex-col max-w-[400] text-center mt-[100px] md:mt-0">
               <Image src="/images/title.png" width={500} height={200} />
               <p>slippes 20. september på alle platformer der du kan høre musikk!</p>
+              <p>Mens du venter, ta den interaktive sofareisen, hør singlene og lær tekstene!</p>
+              <Link href="/historier/frasofaen" className="bg-blue text-white w-[200px] ml-auto mr-auto text-2xl p-3 rounded-xl">Start reisen!</Link>
             </article>
           </section>
           <section id="frontpage-musicvideos" className="flex flex-wrap gap-8 py-8 px-4 bg-blue">
