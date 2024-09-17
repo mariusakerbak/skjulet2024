@@ -8,6 +8,7 @@ import { fetchAlbumLocations } from "@/sanity/services/locationServices";
 import { PortableText } from "@portabletext/react";
 import { urlForImage } from "@/sanity/lib/image";
 import { Icon } from "leaflet";
+import { Map } from "@/components/Map/MapContainer";
 
 export default function sofaStory() {
     const startIcon = new Icon({
@@ -57,13 +58,13 @@ export default function sofaStory() {
       }
     }
     
-    const Map = useMemo(() => dynamic(
+    /*const Map = useMemo(() => dynamic(
       () => import('@/components/Map'),
         {
           loading: () => <p>Kartet laster...</p>,
           ssr: false
         }
-    ), [])
+    ), [])*/
 
     const PortableTextComponents = {
       block: {
