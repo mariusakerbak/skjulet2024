@@ -6,7 +6,7 @@ import { BiLogoApple, BiLogoFacebookCircle, BiLogoInstagram, BiLogoSpotify, BiLo
 
 export default function Header() {
     return (<header className="bg-black flex flex-col md:flex-row justify-between items-center p-3 sticky top-0">
-          <Link href={`/`} class><Image src="/images/skjulet_logo_hvit.svg" width={200} height={75} alt="Skjulet" /></Link>
+          <Link href={`/`}><Image src="/images/skjulet_logo_hvit.svg" width={200} height={75} alt="Skjulet" /></Link>
           <nav className="flex flex-row justify-between items-center">
             <Link href={`https://www.youtube.com/channel/UC7D-jFfJqu3LHvReXgQ8o-g`}><BiLogoYoutube className="hover:text-lion rounded hover:bg-umber duration-1000 transition ease-in-out" /></Link>
             <Link href={`https://open.spotify.com/artist/44im0D1VFjAteBS2F25MlG`}><BiLogoSpotify className="hover:text-lion rounded hover:bg-umber duration-1000 transition ease-in-out" /></Link>

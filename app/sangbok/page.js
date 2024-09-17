@@ -28,9 +28,9 @@ export default function Songbook() {
         {disco?.map(album => <article className="bg-slate-200 p-5 mt-3 rounded-md flex gap-4 flex-col md:flex-row">
             <Image className="rounded-md" src={album.cover} width={400} height={400} />
             <div>
-                <h2 className="text-4xl"><span className="text-sm w-full block">{album.publishyear}</span>{album.title}</h2>
+                <h2 className="text-4xl mb-3"><span className="text-sm w-full block">{album.publishyear}</span>{album.title}</h2>
                 <ul>
-                    {album.songs?.map((song, index) => <li><Link href={`/sangbok/${song.slug.current}`}><span>{index + 1} </span>{song.title}</Link></li>)}
+                    {album.songs?.map((song, index) => <li className="mb-1 h-8"><Link className="flex flex-row gap-2 items-center h-8 hover:bg-lion rounded-l-full rounded-r-md hover:text-white transition-all" href={`/sangbok/${song.slug.current}`}><span className="rounded-full bg-blue text-white w-8 h-8 flex justify-center items-center">{index + 1} </span>{song.title}</Link></li>)}
                 </ul>
             </div>
         </article>)}
