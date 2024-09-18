@@ -3,7 +3,7 @@ import Link from "next/link";
 import { BiLogoApple, BiLogoFacebookCircle, BiLogoInstagram, BiLogoSpotify, BiLogoYoutube } from "react-icons/bi";
 
 export default function Footer() {
-    return (<footer className="container flex-col md:flex-row mx-auto flex justify-items-center min-h-[400px] mt-[100px]">
+    return (<footer className="container flex-col md:flex-row mx-auto flex justify-items-center min-h-[400px] mt-[100px] bg-black">
       <aside className="w-full md:w-[500px] mr-0 md:mr-10">
         <iframe className="mb-10" src="https://open.spotify.com/embed/artist/44im0D1VFjAteBS2F25MlG?utm_source=generator&theme=0" width="100%" height="452"  allowFullScreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </aside>
