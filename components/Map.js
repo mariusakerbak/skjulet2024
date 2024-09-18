@@ -2,10 +2,10 @@ import { MapContainer, Marker, Popup, TileLayer, Tooltip } from "react-leaflet"
 import "leaflet/dist/leaflet.css"
 import "leaflet-defaulticon-compatibility"
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css"
-import { MapController } from "@/components/Map/MapControlLoad";
+import MapController from "@/components/MapController"
 
 
-export default function StoryMap({selectedPlace, visitedPlaces, center, zoom}) {
+export default function Map({selectedPlace, visitedPlaces, center, zoom}) {
 
     return (
         <MapContainer center={center} zoom={zoom} scrollWheelZoom={false} style={{height: '100vh'}}>

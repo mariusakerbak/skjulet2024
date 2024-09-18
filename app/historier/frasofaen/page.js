@@ -57,13 +57,20 @@ export default function sofaStory() {
       }
     }
     
-    const Map = useMemo(() => dynamic(
+    /*const Map = useMemo(() => dynamic(
       () => import('@/components/Map'),
         {
           loading: () => <p>Kartet laster...</p>,
           ssr: false
         }
-    ), [])
+    ), [])*/
+    const Map = () => dynamic(
+      () => import('@/components/Map'),
+        {
+          loading: () => <p>Kartet laster...</p>,
+          ssr: false
+        }
+    )
 
     const PortableTextComponents = {
       block: {
