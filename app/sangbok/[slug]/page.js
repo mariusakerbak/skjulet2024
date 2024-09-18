@@ -66,7 +66,7 @@ const SongDetails = async ({ params}) => {
                 <ul className="mt-2 mb-4">
                     {song.album.songs?.map((s, index) => <li className="mb-1 h-8"><Link className="flex flex-row gap-2 items-center h-8 hover:bg-lion rounded-l-full rounded-r-md hover:text-white transition-all" href={`/sangbok/${s.slug.current}`}><span className="rounded-full bg-blue text-white w-6 h-6 text-sm flex justify-center items-center">{index + 1} </span>{s.title}</Link></li>)}
                 </ul>
-                <Link href="/historier/frasofaen" className="bg-black text-white w-full text-center p-3 mt-5 text-xl rounded-xl hover:bg-blue transition-all">Ta den interaktive sofa-reisen!</Link>
+                
             </section>
             </div>
             
