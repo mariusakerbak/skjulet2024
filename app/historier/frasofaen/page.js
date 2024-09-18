@@ -1,4 +1,3 @@
-
 "use client"
 import { useEffect, useMemo, useState } from "react";
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
@@ -8,6 +7,14 @@ import { fetchAlbumLocations } from "@/sanity/services/locationServices";
 import { PortableText } from "@portabletext/react";
 import { urlForImage } from "@/sanity/lib/image";
 import { Icon } from "leaflet";
+
+const StoryMap = dynamic(
+  () => import('@/components/Map'),
+    {
+      loading: () => <p>Kartet laster...</p>,
+      ssr: false
+    }
+)
 
 export default function sofaStory() {
     const startIcon = new Icon({
@@ -57,13 +64,13 @@ export default function sofaStory() {
       }
     }
     
-    const Map = useMemo(() => dynamic(
+    /*const Map = useMemo(() => dynamic(
       () => import('@/components/Map'),
         {
           loading: () => <p>Kartet laster...</p>,
           ssr: false
         }
-    ), [])
+    ), [])*/
 
     const PortableTextComponents = {
       block: {
@@ -141,7 +148,7 @@ export default function sofaStory() {
                 {selectedPlace?.spotify ? <div className="w-full p-3 mb-3"><iframe style={{borderRadius: "12px"}} src={selectedPlace.spotify} width="100%" height="152" allowFullScreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div> : null}
             </div>
             <div id="couchMapContainer" style={{ aspectRatio: 600/600, minHeight: '500px' }} className="w-full h-full md:w-2/3 lg:w-2/3 bg-red">
-              <Map selectedPlace={selectedPlace} visitedPlaces={visitedPlaces} center={startPlace.center} zoom={startPlace.zoom} />
+              <StoryMap selectedPlace={selectedPlace} visitedPlaces={visitedPlaces} center={startPlace.center} zoom={startPlace.zoom} />
             </div>
         </div>
     )
