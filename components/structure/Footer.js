@@ -3,11 +3,11 @@ import Link from "next/link";
 import { BiLogoApple, BiLogoFacebookCircle, BiLogoInstagram, BiLogoSpotify, BiLogoYoutube } from "react-icons/bi";
 
 export default function Footer() {
-    return (<footer className="container flex-col md:flex-row mx-auto flex justify-items-center min-h-[400px] mt-[100px]">
+    return (<footer className="w-full flex-col md:flex-row mx-auto flex justify-items-center min-h-[400px] mt-[100px] bg-black md:pt-5 md:pl-5 md:pr-5">
       <aside className="w-full md:w-[500px] mr-0 md:mr-10">
         <iframe className="mb-10" src="https://open.spotify.com/embed/artist/44im0D1VFjAteBS2F25MlG?utm_source=generator&theme=0" width="100%" height="452"  allowFullScreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </aside>
-    <div className="relative w-full md:w-[700px]">
+    <div className="relative w-full md:w-[500px]">
       <Image src="/images/experience.png" className="bg-transparent relative md:absolute bottom-0 right-0" alt="Gutta i skjulet" width={600} height={450} />
     </div>
     <article className="flex-auto bg-lion md:rounded-t-lg p-4">
