@@ -26,7 +26,7 @@ export default function Songbook() {
     <section className="w-full max-w-[1000px]">
         <Heading text={"Sangbok"} tag="h1" />
         {disco?.map(album => <article className="bg-slate-200 p-5 mt-3 rounded-md flex gap-4 flex-col md:flex-row">
-            <Image className="rounded-md" src={album.cover} width={400} height={400} />
+            <Image className="rounded-md w-full h-auto" src={album.cover} width={400} height={400} />
             <div>
                 <h2 className="text-4xl mb-3"><span className="text-sm w-full block">{album.publishyear}</span>{album.title}</h2>
                 <ul>
